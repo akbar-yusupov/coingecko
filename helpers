@@ -1,0 +1,6 @@
+flake8
+isort .
+black --line-length 79 .
+
+celery -A coingecko.celery worker --pool=solo -l info
+celery -A coingecko beat -l INFO
